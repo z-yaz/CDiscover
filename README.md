@@ -165,7 +165,11 @@ use `sata_logs` for search to get best model parameter from train logs.
 pretrained model: 
 
 Download the checkpoint files to dir `./weights`.
-> Baidu Disk: [[link]](https://pan.baidu.com/s/1r_xR4F6eLq5pXocgZc8-Ww?pwd=mpnc)
+> Baidu Disk: [[link]](https://pan.baidu.com/s/17wECMZ7X-wkFMXSCQ_SvAw?pwd=ttu)
+or
+> 通过网盘分享的文件：weights
+链接: https://pan.baidu.com/s/17wECMZ7X-wkFMXSCQ_SvAw?pwd=ttue 提取码: ttue 
+--来自百度网盘超级会员v6的分享
 
 ## 🔍 Inference & Evaluation
 
