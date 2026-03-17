@@ -19,16 +19,7 @@ launcher = 'none'
 log_level = 'INFO'
 log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
 max_epochs = 30
-metainfo = dict(
-    classes=(
-        'apple',
-        'avocado',
-        'capsicum',
-        'mango',
-        'orange',
-        'rockmelon',
-        'strawberry',
-    ))
+metainfo = dict(classes=("holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"))
 model = dict(
     as_two_stage=True,
     backbone=dict(
@@ -189,13 +180,7 @@ test_dataloader = dict(
         data_root='../data/dataset1/',
         metainfo=dict(
             classes=(
-                'apple',
-                'avocado',
-                'capsicum',
-                'mango',
-                'orange',
-                'rockmelon',
-                'strawberry',
+                "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
             )),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -261,13 +246,7 @@ train_dataloader = dict(
         filter_cfg=dict(filter_empty_gt=False),
         metainfo=dict(
             classes=(
-                'apple',
-                'avocado',
-                'capsicum',
-                'mango',
-                'orange',
-                'rockmelon',
-                'strawberry',
+              "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
             )),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -579,13 +558,7 @@ train_real_dataset = dict(
     filter_cfg=dict(filter_empty_gt=False),
     metainfo=dict(
         classes=(
-            'apple',
-            'avocado',
-            'capsicum',
-            'mango',
-            'orange',
-            'rockmelon',
-            'strawberry',
+          "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
         )),
     pipeline=[
         dict(backend_args=None, type='LoadImageFromFile'),
@@ -742,18 +715,12 @@ val_cfg = dict(type='ValLoop')
 val_dataloader = dict(
     batch_size=1,
     dataset=dict(
-        ann_file='annotations/test_val.json',
+        ann_file='annotations/test.json',
         data_prefix=dict(img='test/'),
         data_root='../data/dataset1/',
         metainfo=dict(
             classes=(
-                'apple',
-                'avocado',
-                'capsicum',
-                'mango',
-                'orange',
-                'rockmelon',
-                'strawberry',
+              "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
             )),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -782,7 +749,7 @@ val_dataloader = dict(
     persistent_workers=True,
     sampler=dict(shuffle=False, type='DefaultSampler'))
 val_evaluator = dict(
-    ann_file='../data/dataset1/annotations/test_val.json',
+    ann_file='../data/dataset1/annotations/test.json',
     backend_args=None,
     classwise=True,
     format_only=False,
