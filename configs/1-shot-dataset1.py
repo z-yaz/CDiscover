@@ -19,16 +19,7 @@ launcher = 'pytorch'
 log_level = 'INFO'
 log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
 max_epochs = 1000
-metainfo = dict(
-    classes=(
-        'apple',
-        'avocado',
-        'capsicum',
-        'mango',
-        'orange',
-        'rockmelon',
-        'strawberry',
-    ))
+metainfo = dict(classes=("holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"))
 model = dict(
     as_two_stage=True,
     backbone=dict(
@@ -43,7 +34,7 @@ model = dict(
         drop_path_rate=0.3,
         drop_rate=0.0,
         embed_dims=128,
-        frozen_stages=-1,
+        frozen_stages=-1,   # # # 
         mlp_ratio=4,
         num_heads=[
             4,
@@ -74,6 +65,7 @@ model = dict(
             use_sigmoid=True),
         loss_iou=dict(loss_weight=2.0, type='GIoULoss'),
         num_classes=13,
+        # num_classes=10,
         sync_cls_avg_factor=True,
         type='GroundingDINOHead'),
     data_preprocessor=dict(
@@ -162,7 +154,7 @@ model = dict(
     with_box_refine=True)
 optim_wrapper = dict(
     clip_grad=dict(max_norm=0.1, norm_type=2),
-    optimizer=dict(lr=0.0001, type='AdamW', weight_decay=0.0001),
+    optimizer=dict(lr=0.0001, type='AdamW', weight_decay=0.0001), # 
     paramwise_cfg=dict(
         custom_keys=dict(
             absolute_pos_embed=dict(decay_mult=0.0),
@@ -189,13 +181,7 @@ test_dataloader = dict(
         data_root='../data/dataset1/',
         metainfo=dict(
             classes=(
-                'apple',
-                'avocado',
-                'capsicum',
-                'mango',
-                'orange',
-                'rockmelon',
-                'strawberry',
+                "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
             )),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -263,13 +249,7 @@ train_dataloader = dict(
                 filter_cfg=dict(filter_empty_gt=False),
                 metainfo=dict(
                     classes=(
-                        'apple',
-                        'avocado',
-                        'capsicum',
-                        'mango',
-                        'orange',
-                        'rockmelon',
-                        'strawberry',
+                        "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
                     )),
                 pipeline=[
                     dict(backend_args=None, type='LoadImageFromFile'),
@@ -583,13 +563,7 @@ train_real_dataset = dict(
     filter_cfg=dict(filter_empty_gt=False),
     metainfo=dict(
         classes=(
-            'apple',
-            'avocado',
-            'capsicum',
-            'mango',
-            'orange',
-            'rockmelon',
-            'strawberry',
+           "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
         )),
     pipeline=[
         dict(backend_args=None, type='LoadImageFromFile'),
@@ -746,18 +720,12 @@ val_cfg = dict(type='ValLoop')
 val_dataloader = dict(
     batch_size=1,
     dataset=dict(
-        ann_file='annotations/test_val.json',
+        ann_file='annotations/test.json',
         data_prefix=dict(img='test/'),
         data_root='../data/dataset1/',
         metainfo=dict(
             classes=(
-                'apple',
-                'avocado',
-                'capsicum',
-                'mango',
-                'orange',
-                'rockmelon',
-                'strawberry',
+                "holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish"
             )),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -786,7 +754,7 @@ val_dataloader = dict(
     persistent_workers=True,
     sampler=dict(shuffle=False, type='DefaultSampler'))
 val_evaluator = dict(
-    ann_file='../data/dataset1/annotations/test_val.json',
+    ann_file='../data/dataset1/annotations/test.json',
     backend_args=None,
     classwise=True,
     format_only=False,
@@ -801,3 +769,4 @@ visualizer = dict(
     vis_backends=[
         dict(type='LocalVisBackend'),
     ])
+
