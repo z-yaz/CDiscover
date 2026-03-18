@@ -1,49 +1,68 @@
-# 🥈 NTIRE 2025 CD-FSOD Challenge @ CVPR Workshop
+# 🥈 NTIRE 2026 CD-FSOD Challenge @ CVPR Workshop
 
-We are the **AI4EarthLab team** of the **NTIRE 2025 Cross-Domain Few-Shot Object Detection (CD-FSOD) Challenge** at the **CVPR Workshop**.
+We are the **CDiscover team** of the **NTIRE 2026 Cross-Domain Few-Shot Object Detection (CD-FSOD) Challenge** at the **CVPR Workshop**.
 
 - 🏆 **Track**: `open-source track`
 - 🎖️ **Award**: **2nd Place**
-- 🧰 **Method**: *Enhance Then Search: An Augmentation-Search Strategy with Foundation Models for Cross-Domain Few-Shot Object Detection*
+- 🧰 **Method**: *GiPL-Grounding: Generative augmented iterative Pseudo-Labeling for Grounding*
 
-🔗 [NTIRE 2025 Official Website](https://cvlai.net/ntire/2025/)  
-🔗 [NTIRE 2025 Challenge Website](https://codalab.lisn.upsaclay.fr/competitions/21851)  
-🔗 [CD-FSOD Challenge Repository](https://github.com/lovelyqian/NTIRE2025_CDFSOD)
+🔗 [NTIRE 2026 Official Website](https://cvlai.net/ntire/2026/)  
+🔗 [NTIRE 2026 Challenge Website](https://codabench.org/competitions/12873/)  
+🔗 [CD-FSOD Challenge Repository](https://github.com/ohMargin/NTIRE2026_CDFSOD)
 
 <p align="center">
     <img src="https://upload-images.jianshu.io/upload_images/9933353-3d7be0d924bd4270.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Image" width="500">
 </p>
-
+<!-- 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on?p=enhance-then-search-an-augmentation-search)	
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-1)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-1?p=enhance-then-search-an-augmentation-search)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-3)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-3?p=enhance-then-search-an-augmentation-search)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-2)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-2?p=enhance-then-search-an-augmentation-search)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-neu)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-neu?p=enhance-then-search-an-augmentation-search)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-4)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-4?p=enhance-then-search-an-augmentation-search)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-4)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-4?p=enhance-then-search-an-augmentation-search) -->
 
 ---
 
 ## 📰 News
-- [2025.4] 🎉 Update the leaderboards on Paper With Code: [Cross-Domain Few-Shot Object Detection](https://paperswithcode.com/task/cross-domain-few-shot-object-detection/latest) based on open-source settings.
+<!-- - [2025.4] 🎉 Update the leaderboards on Paper With Code: [Cross-Domain Few-Shot Object Detection](https://paperswithcode.com/task/cross-domain-few-shot-object-detection/latest) based on open-source settings.
 - [2025.4] 🎉 Release the paper "Enhance Then Search: An Augmentation-Search Strategy with Foundation Models for Cross-Domain Few-Shot Object Detection" in [arXiv](https://arxiv.org/abs/2504.04517).
-- [2025.4] 🎉 Release the **ETS** code based on GroundingDINO Swin-B.
-- [2025.3] 🎉 Win the **2nd Place** in the NTIRE 2025 CD-FSOD Challenge, CVPR2025.
+- [2025.4] 🎉 Release the **ETS** code based on GroundingDINO Swin-B. -->
+- [2026.3] 🎉 Win the **2nd Place** in the NTIRE 2026 CD-FSOD Challenge, CVPR2026.
 
 ## 🧠 Overview
 
-This repository contains our solution for the `open-source track` of the NTIRE 2025 CD-FSOD Challenge.  
-We propose a method that integrates **dynamic mixed image augmentation with efficient grid-based sub-domain search strategy**, which achieves strong performance on the challenge. 
+This repository contains our solution for the `open-source track` of the NTIRE 2026 CD-FSOD Challenge.  
+We propose a method that integrates **Qwen-based generative augmentation for GroundingDINO and GLIP-driven iterative pseudo-labeling**, which achieves strong performance on the challenge. 
 
-<p align="center">
+<!-- <p align="center">
     <img src="assets/ets.png" alt="Image" width="300">
-</p>
+</p> -->
 
 
 <p align="center">
-    <img src="assets/ets-pipeline.png" alt="Image" width="500">
+    <img src="assets/framework.png" alt="Image" width="500">
 </p>
 
+<!-- <p align="center">
+    <img src="assets/ets-pipeline.png" alt="Image" width="500">
+</p> -->
 ---
+
+
+## 🛠️ Environment Setup
+
+Our method addresses the CDFSOD challenge through a domain-adaptive hybrid strategy. 
+
+For Dataset 2 (a multi-object natural domain with vehicles), we identify that only a single instance is labeled per image despite the presence of multiple targets. To prevent the model from treating unlabeled vehicles as background, we employ a GLIP-based pseudo-labeling pipeline to recover missing annotations, followed by iterative self-training to achieve dense and robust object localization. Refer to [GLIP-Repository](https://github.com/Pumpkinder/CDFSOD.git)  .
+
+
+For Dataset 1\&3, we leverage the Qwen to synthesize generative data, enriching the feature space for GroundingDINO.  Implementation details are given as follows.
+
+
+
+
+
+
 
 ## 🛠️ Environment Setup
 
@@ -66,13 +85,13 @@ pip install git+https://github.com/lvis-dataset/lvis-api.git
 ```
 Then download the BERT weights `bert-base-uncased` into the weights directory,
 ```bash
-cd ETS/
+cd CDiscover/
 huggingface-cli download --resume-download google-bert/bert-base-uncased --local-dir weights/bert-base-uncased
 ```
 
 
 ## 📂 Dataset Preparation
-Please follow the instructions in the [official CD-FSOD repo](https://github.com/lovelyqian/NTIRE2025_CDFSOD) to download and prepare the dataset.
+Please follow the instructions in the [official CD-FSOD repo](https://github.com/ohMargin/NTIRE2026_CDFSOD) to download and prepare the dataset.
 
 ```bash
 .
@@ -151,12 +170,17 @@ train_pipeline = [
 
 To train the model: 
 
-50 groups of experiments were carried out on the 8 x A100, a total of 50 x 8 groups of experiments.
+Experiments were carried out on on a single NVIDIA A6000 GPU for Datasets 1 and 3. 
+
+
+<!-- , a total of 50 x 8 groups of experiments.  -->
+
+<!-- 50 groups of experiments were carried out on the 8 x A100, a total of 50 x 8 groups of experiments.  -->
 
 ```bash
 cd ./mmdetection
 
-./tools/dist_train_muti.sh configs/grounding_dino/CDFSOD/GroudingDINO-few-shot-SwinB.py "0,1,2,3,4,5,6,7" 50
+./tools/dist_train_muti.sh configs/grounding_dino/CDFSOD/GroudingDINO-few-shot-SwinB.py "0" 1
 ```
 use `sampling4val.py` for sampling test set for validation set.
 
@@ -165,11 +189,12 @@ use `sata_logs` for search to get best model parameter from train logs.
 pretrained model: 
 
 Download the checkpoint files to dir `./weights`.
-> Baidu Disk: [[link]](https://pan.baidu.com/s/17wECMZ7X-wkFMXSCQ_SvAw?pwd=ttu)
+> Baidu Disk: [[link]](https://pan.baidu.com/s/1r5H8TsV1qgwuWPuvc1EJZQ?pwd=hg8e)
 or
 > 通过网盘分享的文件：weights
-链接: https://pan.baidu.com/s/17wECMZ7X-wkFMXSCQ_SvAw?pwd=ttue 提取码: ttue 
---来自百度网盘超级会员v6的分享
+链接: https://pan.baidu.com/s/1r5H8TsV1qgwuWPuvc1EJZQ?pwd=hg8e 提取码: hg8e 
+--来自百度网盘超级会员v5的分享
+
 
 ## 🔍 Inference & Evaluation
 
@@ -233,6 +258,10 @@ bash tools/dist_test_out.sh ../configs/10-shot-dataset3.py ../weights/10-shot-da
 python ../pkl2coco.py --coco_file ../data/dataset3/annotations/test.json --pkl_file ../pkls/dataset3_10shot.pkl --output_json ../pkls/dataset3_10shot_coco.json --annotations_json ../submit/dataset3_10shot.json
 ```
 
+
+
+
+<!-- 
 ## 📄 Citation
 If you use our method or codes in your research, please cite:
 ```
@@ -256,4 +285,15 @@ If you use our method or codes in your research, please cite:
 
 
 
+ -->
+
+
+ # Acknowledgements
+Provided codes were adapted from:
+
+- [jaychempan/ETS](https://github.com/jaychempan/ETS)
+- [microsoft/GLIP](https://github.com/microsoft/GLIP)
+- [IDEA-Research/DINO](https://github.com/IDEA-Research/DINO/)
+- [IDEA-Research/GroundingDINO](https://github.com/IDEA-Research/GroundingDINO)
+- [longzw1997/Open-GroundingDino](https://github.com/longzw1997/Open-GroundingDino.git)
 
