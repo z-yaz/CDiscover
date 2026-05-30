@@ -1,6 +1,7 @@
 # 🥈 NTIRE 2026 CD-FSOD Challenge @ CVPR Workshop
 
-We are the **CDiscover team** of the **NTIRE 2026 Cross-Domain Few-Shot Object Detection (CD-FSOD) Challenge** at the **CVPR Workshop**.
+We are the **CDiscover team** from the  <!-- **School of Computer Science and Technology,  -->
+Huazhong University of Science and Technology, participating in the **NTIRE 2026 Cross-Domain Few-Shot Object Detection (CD-FSOD) Challenge** held at the **CVPR Workshop**.
 
 - 🏆 **Track**: `open-source track`
 - 🎖️ **Award**: **2nd Place**
@@ -10,9 +11,12 @@ We are the **CDiscover team** of the **NTIRE 2026 Cross-Domain Few-Shot Object D
 🔗 [NTIRE 2026 Challenge Website](https://codabench.org/competitions/12873/)  
 🔗 [CD-FSOD Challenge Repository](https://github.com/ohMargin/NTIRE2026_CDFSOD)
 
+<!-- <p align="center"><strong>NTIRE 2026 CD-FSOD 挑战赛 · 二等奖</strong></p> -->
+<p align="center"><strong>CD-FSOD Setting</strong></p>
 <p align="center">
     <img src="https://upload-images.jianshu.io/upload_images/9933353-3d7be0d924bd4270.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Image" width="500">
 </p>
+
 <!-- 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on?p=enhance-then-search-an-augmentation-search)	
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhance-then-search-an-augmentation-search/cross-domain-few-shot-object-detection-on-1)](https://paperswithcode.com/sota/cross-domain-few-shot-object-detection-on-1?p=enhance-then-search-an-augmentation-search)
@@ -24,10 +28,9 @@ We are the **CDiscover team** of the **NTIRE 2026 Cross-Domain Few-Shot Object D
 ---
 
 ## 📰 News
-<!-- - [2025.4] 🎉 Update the leaderboards on Paper With Code: [Cross-Domain Few-Shot Object Detection](https://paperswithcode.com/task/cross-domain-few-shot-object-detection/latest) based on open-source settings.
-- [2025.4] 🎉 Release the paper "Enhance Then Search: An Augmentation-Search Strategy with Foundation Models for Cross-Domain Few-Shot Object Detection" in [arXiv](https://arxiv.org/abs/2504.04517).
-- [2025.4] 🎉 Release the **ETS** code based on GroundingDINO Swin-B. -->
-- [2026.3] 🎉 Win the **2nd Place** in the NTIRE 2026 CD-FSOD Challenge, CVPR2026.
+- [2026.5] 🎉 Release the paper "GiPL: Generative augmented iterative Pseudo-Labeling for Cross-Domain Few-Shot Object Detection" in [arXiv](http://arxiv.org/abs/2605.29539).
+- [2026.4] 🎉 Release the **GiPL** code based on GroundingDINO Swin-B. -->
+- [2026.3] 🎉 Win the **2nd Place** in the NTIRE 2026 CD-FSOD Challenge, CVPR 2026.
 
 ## 🧠 Overview
 
@@ -260,31 +263,28 @@ python ../pkl2coco.py --coco_file ../data/dataset3/annotations/test.json --pkl_f
 
 
 
-<!-- 
+
 ## 📄 Citation
-If you use our method or codes in your research, please cite:
+If you find this work useful for your research, please cite:
+
 ```
-@inproceedings{fu2025ntire, 
-  title={NTIRE 2025 challenge on cross-domain few-shot object detection: methods and results},
-  author={Fu, Yuqian and Qiu, Xingyu and Ren, Bin and Fu, Yanwei and Timofte, Radu and Sebe, Nicu and Yang, Ming-Hsuan and Van Gool, Luc and others},
+@inproceedings{liu2026GiPL, 
+  title={GiPL: Generative augmented iterative Pseudo-Labeling for Cross-Domain Few-Shot Object Detection}, 
+  author={Liu, Jiacong and Luo, Shu and Qin, Yikai and Zhao, Yaze and Jiang, Yongwei and Zou, Yixiong},
   booktitle={CVPRW},
-  year={2025}
+  year={2026}
 }
 ```
 
 ```
-@inproceedings{pan2025enhance, 
-  title={Enhance Then Search: An Augmentation-Search Strategy with Foundation Models for Cross-Domain Few-Shot Object Detection},
-  author={Pan, Jiancheng and Liu, Yanxing and He, Xiao and Peng, Long and Li, Jiahao and Sun, Yuze and Huang, Xiaomeng},
+@inproceedings{qiu2026ntire, 
+  title={NTIRE 2026 challenge on cross-domain few-shot object detection: methods and results},
+  author={Qiu, Xingyu and Fu, Yuqian and Jiawei, Geng and Ren, Bin and Jiancheng Pan and Fu, Yanwei and Timofte, Radu and others},
   booktitle={CVPRW},
-  year={2025}
+  year={2026}
 }
+
 ```
-
-
-
-
- -->
 
 
  # Acknowledgements
