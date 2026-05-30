@@ -29,7 +29,7 @@ Huazhong University of Science and Technology, participating in the **NTIRE 2026
 
 ## 📰 News
 - [2026.5] 🎉 Release the paper "GiPL: Generative augmented iterative Pseudo-Labeling for Cross-Domain Few-Shot Object Detection" in [arXiv](http://arxiv.org/abs/2605.29539).
-- [2026.4] 🎉 Release the **GiPL** code based on GroundingDINO Swin-B. -->
+- [2026.4] 🎉 Release the **GiPL** code based on GroundingDINO Swin-B. 
 - [2026.3] 🎉 Win the **2nd Place** in the NTIRE 2026 CD-FSOD Challenge, CVPR 2026.
 
 ## 🧠 Overview
